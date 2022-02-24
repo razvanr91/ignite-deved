@@ -28,6 +28,10 @@ const currentDate = `${currentYear}-${getCurrentMonth()}-${getCurrentDay()}`;
 const lastYear = `${currentYear - 1}-${getCurrentMonth()}-${getCurrentDay()}`;
 const nextYear = `${currentYear + 1}-${getCurrentMonth()}-${getCurrentDay()}`;
 // Popular Games
-const popular_games = `games?key=${process.env.REACT_APP_RAWG_API}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=12`;
+const popularGames = `games?key=${process.env.REACT_APP_RAWG_API}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=12`;
+const upcomingGames = `games?key=${process.env.REACT_APP_RAWG_API}&dates=${currentDate},${nextYear}&ordering=-added&page_size=12`;
+const newGames = `games?key=${process.env.REACT_APP_RAWG_API}&dates=${lastYear},${currentDate}&ordering=-released&page_size=12`;
 
-export const popularGamesUrl = () => `${base_url}${popular_games}`;
+export const popularGamesUrl = () => `${base_url}${popularGames}`;
+export const upcomingGamesUrl = () => `${base_url}${upcomingGames}`
+export const newGamesUrl = () => `${base_url}${newGames}`;
