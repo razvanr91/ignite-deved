@@ -1,14 +1,15 @@
-import { devToolsEnhancer } from '@redux-devtools/extension';
+import { composeWithDevTools, devToolsEnhancer } from '@redux-devtools/extension';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import App from './App';
 import allReducers from './reducers';
 import reportWebVitals from './reportWebVitals';
 
 // Redux Setup
-const store = createStore(allReducers, devToolsEnhancer());
+const store = createStore(allReducers, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
