@@ -1,3 +1,4 @@
+import { devToolsEnhancer } from '@redux-devtools/extension';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,7 +8,7 @@ import allReducers from './reducers';
 import reportWebVitals from './reportWebVitals';
 
 // Redux Setup
-const store = createStore(allReducers);
+const store = createStore(allReducers, devToolsEnhancer());
 
 ReactDOM.render(
   <React.StrictMode>
