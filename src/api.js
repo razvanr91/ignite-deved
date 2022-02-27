@@ -37,4 +37,4 @@ export const upcomingGamesUrl = () => `${base_url}${upcomingGames}`
 export const newGamesUrl = () => `${base_url}${newGames}`;
 
 // Game Details
-export const gameDetailsUrl = (id) => `${base_url}games?key${process.env.REACT_APP_RAWG_API}&${id}`
+export const gameDetailsUrl = (id) => `${base_url}games/${id}?key=${process.env.REACT_APP_RAWG_API}`

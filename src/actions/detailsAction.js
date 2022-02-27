@@ -13,3 +13,5 @@ const loadDetails = (id) => {
         })
     }
 }
+
+export default loadDetails;
