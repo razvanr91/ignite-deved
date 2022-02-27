@@ -42,6 +42,22 @@ const Home = () => {
                     )
                 })}
             </Games>
+            <h2>Popular Games</h2>
+            <Games>
+                {popularGames.map(game => {
+                    return (
+                        <Game key={game.id} game={game} />
+                    )
+                })}
+            </Games>
+            <h2>New Games</h2>
+            <Games>
+                {newGames.map(game => {
+                    return (
+                        <Game key={game.id} game={game} />
+                    )
+                })}
+            </Games>
         </GameList>
     );
 }
