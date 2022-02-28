@@ -1,5 +1,6 @@
 const initialState = {
-    game: {}
+    game: {},
+    screenshots: {}
 }
 
 const detailsReducer = (state = initialState, action) => {
@@ -7,7 +8,9 @@ const detailsReducer = (state = initialState, action) => {
         case "GET_DETAILS":
             return {
                 ...state,
-                game: action.payload
+                game: action.payload.game,
+                screenshots: action.payload.screenshots
+
             }
         default:
             return { ...state }
