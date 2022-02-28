@@ -2,6 +2,8 @@ import React from "react"
 // Styling and animations
 import styled from "styled-components";
 import { motion } from "framer-motion";
+
+// Redux
 import { useDispatch } from "react-redux";
 import loadDetails from "../actions/detailsAction";
 

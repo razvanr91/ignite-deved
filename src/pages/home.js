@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import Game from "../components/Game";
 import { useSelector } from "react-redux";
+import GameDetails from "../components/GameDetails";
 
 const GameList = styled(motion.div)`
     padding: 0rem 5rem;
@@ -30,10 +31,10 @@ const Home = () => {
     }, []);
 
     // Get data from store
-    const {popularGames, newGames, upcomingGames} = useSelector(state => state.games);
-    console.log(popularGames)
+    const { popularGames, newGames, upcomingGames } = useSelector(state => state.games);
     return (
         <GameList>
+            <GameDetails />
             <h2>Upcoming Games</h2>
             <Games>
                 {upcomingGames.map(game => {
