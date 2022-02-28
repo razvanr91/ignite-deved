@@ -5,11 +5,36 @@ import { motion } from "framer-motion";
 //Redux
 import { useSelector } from "react-redux";
 
+const CardShadow = styled(motion.div)`
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: scroll;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+`;
+
+const Details = styled(motion.div)`
+    width: 80%;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    background: white;
+    position: absolute;
+    left: 10%;
+    color: black;
+    img {
+        width: 100%;
+    }
+`;
+
+
+
 const GameDetails = () => {
     const {screenshots, game} = useSelector(state => state.details);
     return (
-        <div className="card-shadow">
-            <div className="details">
+        <CardShadow>
+            <Details>
                 <div className="stats">
                     <div className="rating">
                         <h3>{game.name}</h3>
@@ -39,8 +64,8 @@ const GameDetails = () => {
                         )
                     })}
                 </div>
-            </div>
-        </div>
+            </Details>
+        </CardShadow>
     )
 }
 
