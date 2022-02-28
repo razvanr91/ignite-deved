@@ -5,23 +5,10 @@ const GlobalStyles = createGlobalStyle`
     *{
         margin: 0;
         padding: 0;
-        box-sizeing: border-box;
+        box-sizing: border-box;
     }
 
     html {
-        &::-webkit-scrollbar {
-            width: 0.5rem;
-        }
-        &::-webkit-scrollbar-thumb{
-            background-color: darkgrey;
-        }
-
-        &::-moz-scrollbar {
-            width: 0.5rem;
-        }
-        &::-moz-scrollbar-thumb{
-            background-color: darkgrey;
-        }
 
         body {
             font-family: "Montserrat", sans-serif;
@@ -42,7 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
         p {
             font-size: 1.2rem;
-            line-heigth: 200%;
+            line-height: 200%;
             color: #696969;
         }
 
